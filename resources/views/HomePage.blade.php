@@ -9,5 +9,12 @@
 </head>
 <body>
     <h1>Lista dei film</h1>
+    @dd($myMovies)
+    {{-- <ul>
+        @foreach ($myMovies as $movie)
+            @dd($movie)
+            <li>{{ $movie->title }}</li>
+        @endforeach
+    </ul> --}}
 </body>
 </html>
