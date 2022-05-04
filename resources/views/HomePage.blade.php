@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title>Movies</title>
+
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
     <h1>Lista dei film</h1>
-    {{-- @dd($myMovies) --}}
-    <ul>
+    <div class="container">
         @foreach ($myMovies as $movie)
-            {{-- @dd($movie) --}}
-            <li>{{ $movie->title }}</li>
+            <div class="card">
+                <h2>{{ $movie->title }}</h2>
+                <h3>{{ $movie->original_title }}</h3>
+                <p>{{ $movie->date }}</p>
+                <p class="vote">vote: {{ $movie->vote }}</p>
+            </div>
         @endforeach
-    </ul>
+    </div>
 </body>
 </html>
