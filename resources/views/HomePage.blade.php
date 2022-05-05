@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>Movies</title>
+@extends('temeplates.base')
 
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
-    <h1>Lista dei film</h1>
+@section('pageTitle', 'Home')
+
+@section('pageMain')
+<main>
     <div class="container">
         @foreach ($myMovies as $movie)
             <div class="card">
@@ -21,5 +14,5 @@
             </div>
         @endforeach
     </div>
-</body>
-</html>
+</main>
+@endsection

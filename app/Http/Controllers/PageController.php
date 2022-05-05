@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    
     public function index()
     {
+        $myMovie = new Movie();
+        $myMovie->title = 'Cenerentola';
+        $myMovie->save();
+
         $myMovies = Movie::all();
         
-        // dd($myMovies);
         return view('HomePage', ["myMovies" => $myMovies]);
     }
 }
